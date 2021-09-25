@@ -26,12 +26,12 @@ const betterWords = words.filter(word => {
 });
 
 //counting how many times words in the overusedWords array appear
-const countOverUsedWords = words.filter(word => {
-  return overusedWords.includes(word)
-});
-console.log('Number of overused words in passage is ' + countOverUsedWords.length);
-//ask Pete about using .foreach with an if and counters for each word
-//or.every and counting
+for (let counter = 0; counter < overusedWords.length; counter++) {
+  const countOverUsedWords = words.filter(word => {
+    return [overusedWords[counter]].includes(word)
+  });
+  console.log(`Total number of ${overusedWords[counter]} in passage is ` + countOverUsedWords.length);
+}
 
 //counting the number of sentences in the story
 const characters = story.split('');
@@ -39,6 +39,20 @@ const sentences = characters.filter(char => {
   return char === '!' || char === '.';
 })
 console.log('Sentence Count ' + sentences.length);
-//ask Pete about a sentence counter
 
-console.log(betterWords.join(' '));
+//using RegEX to count sentences
+const sents = story.split(/[\.|\!]/);
+console.log('Sentence Count using RegEX ' + (sents.length-1));
+
+
+//joining the new words back into a string
+//console.log(betterWords.join(' '));
+
+
+let typing = 'The quick brown fox jumped over the lazy dog.'
+//count words longer than 5 letters
+const justTheWords = typing.split(' ');
+const longWords = justTheWords.filter(word => {
+    return word.length > 3
+})
+
