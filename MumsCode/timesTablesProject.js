@@ -1,4 +1,6 @@
 //TimesTables Project
+const process = require('process'); 
+console.log(process.argv);
 
 //display 1 of the tables in an array
 const questionArrayShort = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -21,6 +23,14 @@ function generateQuestion (num1, num2) {
     console.log('Here is the square number to help you, count up or down...');
     console.log(`${num2} x ${num2} = ${square}`);
     console.log('');//spare line to space it out
+    console.log('These sums might help...');
+    let lowTimesResult = 2* num2;
+    console.log(`2 sets of ${num2} are ${lowTimesResult} (2 x ${num2} = ${lowTimesResult})`);
+    console.log('and');
+    let two = num2+num2;
+    let doubledResult = two * num2;
+    console.log(`${two} sets of ${num2} are ${doubledResult} (${two} x ${num2} = ${doubledResult})`);
+    console.log('');//spare line to space it out
 
     //cycle through the array to prompt the answer
     const resultsArray = questionArrayLong.map(x => x * num2);
@@ -33,5 +43,4 @@ function generateQuestion (num1, num2) {
 
 }
 
-//use arrays to generate a question
 generateQuestion()
