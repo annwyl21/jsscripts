@@ -37,3 +37,38 @@ console.log(farmshopA);
 const {name} = farmhouse;
 console.log(name); //printing the newly created variable
 console.log(`The ${name} family live in the farmhouse.`) //printing it in a string
+
+
+
+function dogFactory (name, breed, weight) {
+    return {
+        _name: name,
+        get name() {
+          return this._name;
+        },
+        set name(newName) {
+          this._name = newName;
+        },
+        _breed: breed,
+        get breed() {
+          return this._breed;
+        },
+        set breed(newBreed) {
+          this._breed = newBreed;
+        },
+        _weight: weight,
+        get weight() {
+          return this._weight;
+        },
+        set weight(newWeight) {
+          this._weight = newWeight;
+        },
+        bark () {
+          return 'ruff! ruff!';
+        },
+        eatTooManyTreats() {
+          this._weight++;
+        }
+    }
+}
+console.log(dogFactory('Joe', 'Pug', 27));
