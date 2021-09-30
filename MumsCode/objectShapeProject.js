@@ -23,3 +23,19 @@ let triangle = Shape('triangle', 3, 3);
 console.log(triangle);
 console.log(calcPerimeter(triangle));
 
+
+
+function groceries(array) {
+    for (let count=0; count<array.length; count++) {
+        console.log(count);
+    } 
+}
+
+groceries( [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}] );
+// returns 'Carrots, Hummus, Pesto and Rigatoni'
+ 
+//groceries( [{item: 'Bread'}, {item: 'Butter'}] );
+// returns 'Bread and Butter'
+ 
+//groceries( [{item: 'Cheese Balls'}] );
+// returns 'Cheese Balls'
