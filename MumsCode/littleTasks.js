@@ -166,3 +166,42 @@ const meal = [{name: 'arugula', source: 'plant'}, {name: 'tomatoes', source: 'pl
 const randomStuff = ['credit card', 'screwdriver', 'receipt', 'gum', 'keys', 'used gum', 'plastic spoon'];
 console.log(findMyKeys(randomStuff))
 // Should print 4
+
+
+
+function factorial (num) {
+  let array = [];
+  for (let count=num; count >0; count--) {
+      //console.log(count);
+              array.push(count);
+  }
+  const reducer = (previousValue, currentValue) => previousValue * currentValue;
+  return array.reduce(reducer);
+}
+console.log(factorial(6));
+
+
+
+function subLength(string, character) {
+  const lettersArray = string.split('');
+  //console.log(lettersArray);
+
+  const indexOfFirst = lettersArray.indexOf(character);
+  //console.log(lettersArray.indexOf(character));
+  const indexOfSecond = lettersArray.indexOf(character, (indexOfFirst +1));
+  const indexOfThird = lettersArray.indexOf(character, (indexOfSecond +1));
+  //console.log(character, indexOfFirst, indexOfSecond, indexOfThird);
+
+  if (indexOfFirst !== -1 && indexOfSecond !== -1 && indexOfThird === -1) {
+      return (indexOfSecond - indexOfFirst)+1;
+  } else if (indexOfFirst === -1 || indexOfSecond === -1) {
+      return 0;
+  } else if (indexOfThird !== -1) {
+      return 0;
+  }
+}
+
+subLength('Saturday', 'a'); // returns 6
+subLength('summer', 'm'); // returns 2
+subLength('digitize', 'i'); // returns 0
+subLength('cheesecake', 'k'); // returns 0
