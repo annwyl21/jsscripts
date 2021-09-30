@@ -23,17 +23,44 @@ const qandaArray = [
     {question: 'What does C mean in roman numerals?', answer: 100},
     {question: 'What does D mean in roman numerals?', answer: 500},
 ]
+let answerArray = [];
+function selectQuestion() {
+    //randomly select a question to ask
+    let numQuestions = qandaArray.length;
+    //console.log(`length = ${numQuestions}`);
+    let randomNumber1 = Math.floor(Math.random()*numQuestions);
+    let findQuestion = qandaArray[randomNumber1];
+    console.log(findQuestion.question);
+    
+    //create answer selection
+    answerArray.push(findQuestion.answer);
+    let alt1Answer = qandaArray[Math.floor(Math.random()*numQuestions)];
+    answerArray.push(alt1Answer.answer);
+    let alt2Answer = qandaArray[Math.floor(Math.random()*numQuestions)];
+    answerArray.push(alt2Answer.answer);
+    shuffle();
+    return answerArray;
+}
 
-//randomly select a question to ask
-let numQuestions = qandaArray.length;
-//console.log(`length = ${numQuestions}`);
-let randomNumber1 = Math.floor(Math.random()*numQuestions);
-let findQuestion = qandaArray[randomNumber1];
-console.log(findQuestion.question);
+function shuffle() {
+    //repeat 100 times
+    let count = 0;
+    while (count!=10) {
+        count++;
 
-//present a choice of 3
-console.log(findQuestion.answer);
-let alt1Answer = qandaArray[Math.floor(Math.random()*numQuestions)];
-console.log(alt1Answer.answer);
-let alt2Answer = qandaArray[Math.floor(Math.random()*numQuestions)];
-console.log(alt2Answer.answer);
+        //pick 2 random rules
+        let leftIndex = Math.floor(Math.random() * answerArray.length);
+        let rightIndex = Math.floor(Math.random() * answerArray.length);
+
+        //swap rules over
+        let leftRule = answerArray[leftIndex];
+        let rightRule = answerArray[rightIndex];
+        // console.log(String(leftIndex) + leftRule);
+        // console.log(String(rightIndex) + rightRule);
+        // console.log();
+        answerArray[leftIndex] = rightRule;
+        answerArray[rightIndex] = leftRule;
+    }
+}
+
+console.log(selectQuestion());
