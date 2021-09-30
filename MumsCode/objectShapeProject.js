@@ -29,22 +29,28 @@ function groceries(array) {
     let newArrayStart = [];
 
     if (array.length >2) {
+        let myJoinedList;
         for (let count=0; count<array.length-2; count++) {
             //console.log(count);
             let shoppingItem = array[count];
             newArrayStart.push(shoppingItem.item);
             //console.log(newArrayStart);
-            newArrayStart.join(', ');
+            myJoinedList = newArrayStart.join(', '); //.join sends back a joined string so a return or a variable to capute that output is required
         }
-        let newArrayEnd = [];
-            let ItemToBuy1 = array[array.length-2]; 
-            newArrayEnd.push(ItemToBuy1.item);
-            let ItemToBuy2 = array[array.length-1];
-            newArrayEnd.push(ItemToBuy2.item);
-            newArrayEnd.splice(newArrayEnd.length-1, 0, ' and '); 
+        let space = ', ';//the extra space at the end of the beginning array and the string at the end
+        let ItemToBuy1 = array[array.length-2];
+        let ItemToBuy2 = array[array.length-1];
+        let string = `${ItemToBuy1.item} and ${ItemToBuy2.item}`;
+        // let newArrayEnd = [];
+        //     let ItemToBuy1 = array[array.length-2]; 
+        //     newArrayEnd.push(ItemToBuy1.item);
+        //     let ItemToBuy2 = array[array.length-1];
+        //     newArrayEnd.push(ItemToBuy2.item);
+        //     newArrayEnd.splice(newArrayEnd.length-1, 0, ' and '); 
             //console.log(newArrayEnd);
 
-            let ShoppingList = newArrayStart.concat(newArrayEnd);
+            //let ShoppingList = newArrayStart.concat(newArrayEnd);
+            let ShoppingList = myJoinedList.concat(space, string);
             return ShoppingList;
 
     } else if (array.length ===2) {
