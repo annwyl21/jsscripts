@@ -24,18 +24,46 @@ console.log(triangle);
 console.log(calcPerimeter(triangle));
 
 
-
+//example of a working for loop
 function groceries(array) {
-    for (let count=0; count<array.length; count++) {
-        console.log(count);
-    } 
+    let newArrayStart = [];
+
+    if (array.length >2) {
+        for (let count=0; count<array.length-2; count++) {
+            //console.log(count);
+            let shoppingItem = array[count];
+            newArrayStart.push(shoppingItem.item);
+            //console.log(newArrayStart);
+            newArrayStart.join(', ');
+        }
+        let newArrayEnd = [];
+            let ItemToBuy1 = array[array.length-2]; 
+            newArrayEnd.push(ItemToBuy1.item);
+            let ItemToBuy2 = array[array.length-1];
+            newArrayEnd.push(ItemToBuy2.item);
+            newArrayEnd.splice(newArrayEnd.length-1, 0, ' and '); 
+            //console.log(newArrayEnd);
+
+            let ShoppingList = newArrayStart.concat(newArrayEnd);
+            return ShoppingList;
+
+    } else if (array.length ===2) {
+        let Thing1 = array[0]; 
+        let Thing2 = array[1];
+        return `${Thing1.item} and ${Thing2.item}`;
+    } else {
+        let giftPosition = array[0];
+        return giftPosition.item;
+    };
 }
 
-groceries( [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}] );
+console.log(groceries( [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}] ));
 // returns 'Carrots, Hummus, Pesto and Rigatoni'
  
-//groceries( [{item: 'Bread'}, {item: 'Butter'}] );
+console.log(groceries( [{item: 'Bread'}, {item: 'Butter'}] ));
 // returns 'Bread and Butter'
  
-//groceries( [{item: 'Cheese Balls'}] );
+console.log(groceries( [{item: 'Cheese Balls'}] ));
 // returns 'Cheese Balls'
+
+console.log(groceries([{item: 'Lettuce'}, {item: 'Onions'}, {item: 'Tomatoes'}]));
