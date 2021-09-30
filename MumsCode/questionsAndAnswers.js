@@ -31,7 +31,10 @@ function selectQuestion() {
     let randomNumber1 = Math.floor(Math.random()*numQuestions);
     let findQuestion = qandaArray[randomNumber1];
     console.log(findQuestion.question);
-    
+    createAnswer(findQuestion, numQuestions);
+}
+
+function createAnswer(findQuestion, numQuestions) {
     //create answer selection
     answerArray.push(findQuestion.answer);
     let alt1Answer = qandaArray[Math.floor(Math.random()*numQuestions)];
@@ -39,7 +42,7 @@ function selectQuestion() {
     let alt2Answer = qandaArray[Math.floor(Math.random()*numQuestions)];
     answerArray.push(alt2Answer.answer);
     shuffle();
-    return answerArray;
+    console.log(answerArray);
 }
 
 function shuffle() {
@@ -63,4 +66,4 @@ function shuffle() {
     }
 }
 
-console.log(selectQuestion());
+selectQuestion();
