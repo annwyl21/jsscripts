@@ -49,7 +49,7 @@ function generateQuestion() {
     //console.log(resultsArray);
 
     //generating the full times table prompt
-    for (let count = 0; count < 20; count++) {
+    for (let count = 0; count < 21; count++) {
         console.log(count + ' x ' + num2 + ' = ' + (count * num2))
     }
 
