@@ -22,7 +22,23 @@ function calculateInterest(amount, rate, term, repayment=0) {
 
 calculateInterest(100, 28.5, 3);
 console.log('');//blank line
-calculateInterest(-100, 28.5, 3, 50);
+calculateInterest(-100, 30, 3, 50);
+console.log('');
 
 //Can I save towards a goal
-//How long will it take to repay my mortgage
+function goal(target, saved) {
+    let moneyPot = [saved];
+    console.log(`Savings target = ${target}`);
+    console.log(`Month 1 Savings £ ${saved}`);
+    //console.log(moneyPot[0], target);
+    //until target reached
+    for (let count =0; moneyPot[0]<target; count++) {
+        //console.log(moneyPot[0], target);
+        let savingsIncrement = moneyPot[0] + saved;
+        moneyPot.unshift(savingsIncrement);
+        console.log(`Month ${count+2} Savings £ ${moneyPot[0]}`)
+    }
+    console.log(`It will take ${moneyPot.length} months to save up to achieve your goal.`)
+}
+
+goal(296, 5)
