@@ -41,4 +41,24 @@ function goal(target, saved) {
     console.log(`It will take ${moneyPot.length} months to save up to achieve your goal.`)
 }
 
-goal(296, 5)
+goal(500, 205)
+console.log(''),
+
+
+//Can I save towards a goal without an array
+function savingsAccount(target, saved) {
+    let moneyPot = 0;
+    console.log(`Savings target = ${target}`);
+    console.log(`Month 1 Savings £ ${saved}`);
+    //console.log(moneyPot[0], target);
+    //until target reached
+    for (let count =0; moneyPot<target; count++) {
+        //console.log(moneyPot[0], target);
+        moneyPot += saved;
+        //let savingsIncrement = moneyPot[0] + saved;
+        //moneyPot.unshift(savingsIncrement);
+        console.log(`Month ${count+2} Savings £ ${moneyPot}`)
+    }
+}
+
+savingsAccount(5000, 300)
