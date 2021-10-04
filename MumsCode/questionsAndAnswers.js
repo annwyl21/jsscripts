@@ -1,28 +1,32 @@
 //my questions and answers program
 
 //array of questions and answer objects
-const qandaArray = [
-    {question: 'What does I mean in roman numerals?', answer: 1},
-    {question: 'What does II mean in roman numerals?', answer: 2},
-    {question: 'What does III mean in roman numerals?', answer: 3},
-    {question: 'What does IV mean in roman numerals?', answer: 4},
-    {question: 'What does V mean in roman numerals?', answer: 5},
-    {question: 'What does VI mean in roman numerals?', answer: 6},
-    {question: 'What does VII mean in roman numerals?', answer: 7},
-    {question: 'What does VIII mean in roman numerals?', answer: 8},
-    {question: 'What does IX mean in roman numerals?', answer: 9},
-    {question: 'What does XI mean in roman numerals?', answer: 11},
-    {question: 'What does XII mean in roman numerals?', answer: 12},
-    {question: 'What does XIII mean in roman numerals?', answer: 13},
-    {question: 'What does IXX mean in roman numerals?', answer: 19},
-    {question: 'What does XX mean in roman numerals?', answer: 20},
-    {question: 'What does M mean in roman numerals?', answer: 1000},
-    {question: 'What does IM mean in roman numerals?', answer: 999},
-    {question: 'What does MI mean in roman numerals?', answer: 1001},
-    {question: 'What does L mean in roman numerals?', answer: 50},
-    {question: 'What does C mean in roman numerals?', answer: 100},
-    {question: 'What does D mean in roman numerals?', answer: 500},
-]
+//const qandaArray = [
+//     {question: 'What does I mean in roman numerals?', answer: 1},
+//     {question: 'What does II mean in roman numerals?', answer: 2},
+//     {question: 'What does III mean in roman numerals?', answer: 3},
+//     {question: 'What does IV mean in roman numerals?', answer: 4},
+//     {question: 'What does V mean in roman numerals?', answer: 5},
+//     {question: 'What does VI mean in roman numerals?', answer: 6},
+//     {question: 'What does VII mean in roman numerals?', answer: 7},
+//     {question: 'What does VIII mean in roman numerals?', answer: 8},
+//     {question: 'What does IX mean in roman numerals?', answer: 9},
+//     {question: 'What does XI mean in roman numerals?', answer: 11},
+//     {question: 'What does XII mean in roman numerals?', answer: 12},
+//     {question: 'What does XIII mean in roman numerals?', answer: 13},
+//     {question: 'What does IXX mean in roman numerals?', answer: 19},
+//     {question: 'What does XX mean in roman numerals?', answer: 20},
+//     {question: 'What does M mean in roman numerals?', answer: 1000},
+//     {question: 'What does IM mean in roman numerals?', answer: 999},
+//     {question: 'What does MI mean in roman numerals?', answer: 1001},
+//     {question: 'What does L mean in roman numerals?', answer: 50},
+//     {question: 'What does C mean in roman numerals?', answer: 100},
+//     {question: 'What does D mean in roman numerals?', answer: 500},
+// ]
+
+console.log(process.argv[2]);
+let qandaArray = require(process.argv[2]);//add this to the node reference line below ./QnA2.json to reference the Question List
+
 let answerArray = [];
 function selectQuestion() {
     //randomly select a question to ask

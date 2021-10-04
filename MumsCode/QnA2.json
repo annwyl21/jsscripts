@@ -1,0 +1,12 @@
+[
+    {"question": "What is a noun phrase?", "answer": "a group of words that contain a noun"},
+    {"question": "What is a sentence?", "answer": "a complete, stand alone linguistic expresion"},
+    {"question": "What is a clause?", "answer": "part of a longer sentence"},
+    {"question": "What is an independent clause?", "answer": "part of a longer sentence that could stand on its own as a sentence without the other parts"},
+    {"question": "What is an independent clause?", "answer": "part of a sentence that contains a verb but can not stand alone"},
+    {"question": "Select the example of a noun phrase", "answer": "the damp dog - the noun is 'dog'."},
+    {"question": "Select the sentence that contains a dependent clause", "answer": "While the kettle boiled, the man made the tea"},
+    {"question": "Select the sentence that contains 2 independent clauses", "answer": "The homework was difficult for the students, they struggled to complete all the questions in time."},
+    {"question": "What is an adjective?", "answer": "An adjective describes the noun in a noun phrase"},
+    {"question": "What is an adverb?", "answer": "An adverb describe the verb in a sentence (says how something was done, eg'slowly)"}
+]
