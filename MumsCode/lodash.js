@@ -32,6 +32,36 @@ const _ = {
         let endPaddingLength = length - string.length - startPaddingLength;
         let paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
         return paddedString;
-    },//node test/pad.js
+    },
   
-  };
+    has(object, key){
+      let hasValue = object[key];
+      if(hasValue != undefined){
+        return true;
+      }else{
+        return false;
+      }
+      return hasValue;
+    },
+  
+    invert(object){
+      let invertedObject = {};
+      for(let key in object){
+        let originalValue = object[key];
+        invertedObject[originalValue] = key;
+      }
+      return invertedObject;
+    },
+  
+    findKey(object, predicate){
+      for(let key in object){
+        let value = object[key];
+        let predicateReturnValue = predicate(value);
+              if(predicateReturnValue){
+          return key;
+        }
+        undefined
+          return undefined
+      }
+      
+    },
