@@ -95,28 +95,38 @@ function findInvalidCards(nestedArray){
     //console.log(invalidCards);
     //console.log(invalidCards[0]);
     //console.log(invalidCards[1]);
+    idInvalidCardCompanies(invalidCards);
 }
 
-idInvalidCardCompanies(invalidCardsArray){
+function idInvalidCardCompanies(invalidCardsArray){
+    let companyList = [];
+    //cycle through the main array pulling each each of the arrays containing individual card numbers
     for (c=0; c<invalidCardsArray.length; c++){
-        //identify [0] for each array item withn the main array
+        //identify [0] for each array item within the main array
+        let temporaryArray = invalidCardsArray[c];
+        //console.log(temporaryArray[0]);
+        let temporaryCompany;
+        //check if the [0] element is and return an array of company names (that have issued invalid cards)
+        if(temporaryArray[0]===3){
+            temporaryCompany = "Amex";
+        }else if(temporaryArray[0]===4){
+            temporaryCompany = "Visa";
+        }else if(temporaryArray[0]===5){
+            temporaryCompany = "Mastercard";
+        }else if(temporaryArray[0]===6){
+            temporaryCompany = "Discover";
+        }else {
+            temporaryCompany = "Company unknown";
+        }
+    companyList.push(temporaryCompany);
+    //console.log(companyList);
     }
-    //check if the [0] element is...
-    //return an array of company names (that have issued invalid cards)
-    if(array[0]===3){
-        return "Amex"
-    }else if(array[0]===4){
-        return "Visa"
-    }else if(array[0]===5){
-        return "Mastercard"
-    }else if(array[0]===6){
-        return "Discover"
-    }else {
-        return "Company unknown"
-    }
+    //remove duplicate companies from the list
+    console.log(companyList);
+}
+
     //returns array of companies
     //remove duplicate elements from this array
-}
 
 
 //numberToTest = [4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8],
