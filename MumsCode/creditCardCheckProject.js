@@ -39,9 +39,9 @@ function validateCred(array){
       let check = count % 2;
       let position = array.length-(count+1);
         if (check===0){
-            staysSameArray.push(array[position]);
+            staysSameArray.push(workingArray[position]);
         }else {
-            mathsArray.push(array[position]);
+            mathsArray.push(workingArray[position]);
         }
     }
     //console.log(`Number that remain unchanged ` + staysSameArray);
@@ -78,17 +78,46 @@ function validateCred(array){
 
 function findInvalidCards(nestedArray){
     let invalidCards = [];
+    let invalidCardCount = 0;
     for (checkCount=0; checkCount<nestedArray.length; checkCount++){
         //console.log(`Card Number ` + nestedArray[checkCount]);
         //console.log(validateCred(nestedArray[checkCount]));
                 //return a new nested array of invalid cards
                 if (validateCred(nestedArray[checkCount]) === false){
-                invalidCards.push(nestedArray[checkCount]);
+                    invalidCards.push(nestedArray[checkCount]);
+                    //ANOTHER WAY TO SOLVE THIS PROBLEM WITHOUT .PUSH
+                //invalidCards[invalidCardCount] = nestedArray[checkCount];
+                //invalidCardCount++;
+
                 //console.log(`It was false ` + nestedArray[checkCount]);
                 }
     }
-    console.log(`Invalid Cards ` + invalidCards);
+    //console.log(invalidCards);
+    //console.log(invalidCards[0]);
+    //console.log(invalidCards[1]);
 }
+
+idInvalidCardCompanies(invalidCardsArray){
+    for (c=0; c<invalidCardsArray.length; c++){
+        //identify [0] for each array item withn the main array
+    }
+    //check if the [0] element is...
+    //return an array of company names (that have issued invalid cards)
+    if(array[0]===3){
+        return "Amex"
+    }else if(array[0]===4){
+        return "Visa"
+    }else if(array[0]===5){
+        return "Mastercard"
+    }else if(array[0]===6){
+        return "Discover"
+    }else {
+        return "Company unknown"
+    }
+    //returns array of companies
+    //remove duplicate elements from this array
+}
+
 
 //numberToTest = [4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8],
 //console.log(`Original Card Number ` + invalid1);
