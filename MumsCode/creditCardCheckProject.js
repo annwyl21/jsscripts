@@ -23,6 +23,8 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3];
 
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5];
+const batchValid = [valid1, valid2, valid3, valid4, valid5];
+const batchInvalid = [invalid1, invalid2, invalid3, invalid4, invalid5];
 
 
 // Add your functions below:
@@ -34,10 +36,11 @@ function validateCred(array){
   //separating the odd and even numbers using the count in the for loop
   for (count=0; count<array.length; count++){
       let check = count % 2;
+      let position = array.length-(count+1);
         if (check===0){
-            staysSameArray.push(array[count]);
+            staysSameArray.push(array[position]);
         }else {
-            mathsArray.push(array[count]);
+            mathsArray.push(array[position]);
         }
     }
     //console.log(`Number that remain unchanged ` + staysSameArray);
@@ -54,8 +57,8 @@ function validateCred(array){
             numberUnderNine = doubledNumber
         }
         doubledArray.push(numberUnderNine);
-        //console.log(`Maths Array doubled` + doubledArray)
     }
+    //console.log(`Maths Array doubled ` + doubledArray)
 
     //the final bit of maths(adding up the numbers)
     const reducer = (previousValue, currentValue) => previousValue + currentValue;
@@ -72,7 +75,15 @@ function validateCred(array){
     }
 }
 
+function findInvalidCards(nestedArray){
+    for (checkCount=0; checkCount<nestedArray.length; checkCount++){
+        console.log(`Card Number ` + nestedArray[checkCount]);
+        console.log(validateCred(nestedArray[checkCount]));
+    }
+}
+
 //numberToTest = [4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8],
 //console.log(`Original Card Number ` + invalid1);
-console.log(`Is this a valid card? ` + validateCred(invalid1));
+//console.log(`Is this a valid card? ` + validateCred(numberToTest));
 //console.log(invalid1);
+findInvalidCards(batchValid);
