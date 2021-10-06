@@ -29,12 +29,13 @@ const batchInvalid = [invalid1, invalid2, invalid3, invalid4, invalid5];
 
 // Add your functions below:
 function validateCred(array){
-  let staysSameArray = [];//even numbers that do not change
-  let mathsArray = [];//odd numbers from the array count that need to have the maths done
-  let doubledArray = [];//the array of numbers after the maths has been completed
+    let workingArray = array;
+    let staysSameArray = [];//even numbers that do not change
+    let mathsArray = [];//odd numbers from the array count that need to have the maths done
+    let doubledArray = [];//the array of numbers after the maths has been completed
 
-  //separating the odd and even numbers using the count in the for loop
-  for (count=0; count<array.length; count++){
+    //separating the odd and even numbers using the count in the for loop
+    for (count=0; count<array.length; count++){
       let check = count % 2;
       let position = array.length-(count+1);
         if (check===0){
@@ -76,14 +77,21 @@ function validateCred(array){
 }
 
 function findInvalidCards(nestedArray){
+    let invalidCards = [];
     for (checkCount=0; checkCount<nestedArray.length; checkCount++){
-        console.log(`Card Number ` + nestedArray[checkCount]);
-        console.log(validateCred(nestedArray[checkCount]));
+        //console.log(`Card Number ` + nestedArray[checkCount]);
+        //console.log(validateCred(nestedArray[checkCount]));
+                //return a new nested array of invalid cards
+                if (validateCred(nestedArray[checkCount]) === false){
+                invalidCards.push(nestedArray[checkCount]);
+                //console.log(`It was false ` + nestedArray[checkCount]);
+                }
     }
+    console.log(`Invalid Cards ` + invalidCards);
 }
 
 //numberToTest = [4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8],
 //console.log(`Original Card Number ` + invalid1);
 //console.log(`Is this a valid card? ` + validateCred(numberToTest));
 //console.log(invalid1);
-findInvalidCards(batchValid);
+findInvalidCards(batchInvalid);
