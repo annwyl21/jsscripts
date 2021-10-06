@@ -27,45 +27,52 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 function validateCred(array){
-  let reverseArray = array.reverse();
-  console.log(`Card Number Reversed ` + reverseArray);
-  let staysSameArray = [];
-  let mathsArray = [];
+  let staysSameArray = [];//even numbers that do not change
+  let mathsArray = [];//odd numbers from the array count that need to have the maths done
+  let doubledArray = [];//the array of numbers after the maths has been completed
+
+  //separating the odd and even numbers using the count in the for loop
   for (count=0; count<array.length; count++){
-      //console.log(`Card Number Reversed ` + count%2 + `checking for even numbers`);
       let check = count % 2;
         if (check===0){
-            staysSameArray.push(reverseArray[count]);
+            staysSameArray.push(array[count]);
         }else {
-            mathsArray.push(reverseArray[count]);
+            mathsArray.push(array[count]);
         }
-    
     }
-    console.log(`Number that remain unchanged ` + staysSameArray);
-    console.log(`Numbers to do maths on ` + mathsArray);
+    //console.log(`Number that remain unchanged ` + staysSameArray);
+    //console.log(`Numbers to do maths on ` + mathsArray);
 
-    mathsArray.forEach(num => {num *2});
-    console.log(`Numbers doubled ` + mathsArray);
-    let filteredArray = mathsArray.filter (number => number > 9);
-    filteredArray.forEach(element => {element-9});
+    //the for loop that does the maths
+    for (counter =0; counter<mathsArray.length; counter++){
+        let numberToDouble = mathsArray[counter];
+        let doubledNumber = numberToDouble*2;
+        let numberUnderNine
+        if(doubledNumber>9){
+            numberUnderNine = doubledNumber-9
+        }else{
+            numberUnderNine = doubledNumber
+        }
+        doubledArray.push(numberUnderNine);
+        //console.log(`Maths Array doubled` + doubledArray)
+    }
 
-//     const reducer = (previousValue, currentValue) => previousValue + currentValue;
-//     let unchangedResult = staysSameArray.reduce(reducer);
-//     let filteredResult = filteredArray.reduce(reducer);
-//     let mathsResult = mathsArray.reduce(reducer);
-    
-//     let luhnResult = unchangedResult + filteredResult + mathsResult;
+    //the final bit of maths(adding up the numbers)
+    const reducer = (previousValue, currentValue) => previousValue + currentValue;
+    let unchangedResult = staysSameArray.reduce(reducer);
+    let mathsResult = doubledArray.reduce(reducer);
+    let luhnResult = unchangedResult + mathsResult;
+    //console.log(`Luhn Result ` + luhnResult);
 
-//     console.log(`Luhn Result ` + luhnResult);
-//   if(luhnResult%10===0){
-//         return true
-//     }else {
-//         return false;
-//     }
-array.reverse()
+    //checking the luhn result to identify valid and invalid cards using a boolean
+  if(luhnResult%10===0){
+        return true
+    }else {
+        return false;
+    }
 }
 
-numberToTest = [4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8],
-console.log(numberToTest);
-console.log(`Is this a valid card?` + validateCred(numberToTest));
-console.log(numberToTest);
+//numberToTest = [4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8],
+//console.log(`Original Card Number ` + invalid1);
+console.log(`Is this a valid card? ` + validateCred(invalid1));
+//console.log(invalid1);
