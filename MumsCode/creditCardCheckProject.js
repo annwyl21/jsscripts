@@ -25,6 +25,7 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3];
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5];
 const batchValid = [valid1, valid2, valid3, valid4, valid5];
 const batchInvalid = [invalid1, invalid2, invalid3, invalid4, invalid5];
+const batchMystery = [mystery1, mystery2, mystery3, mystery4, mystery5,]
 
 
 // Add your functions below:
@@ -122,15 +123,14 @@ function idInvalidCardCompanies(invalidCardsArray){
     //console.log(companyList);
     }
     //remove duplicate companies from the list
-    console.log(companyList);
+    function removeDuplicates(data){
+        return [...new Set(data)]
+    }
+    console.log(removeDuplicates(companyList));
 }
-
-    //returns array of companies
-    //remove duplicate elements from this array
-
 
 //numberToTest = [4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8],
 //console.log(`Original Card Number ` + invalid1);
 //console.log(`Is this a valid card? ` + validateCred(numberToTest));
 //console.log(invalid1);
-findInvalidCards(batchInvalid);
+findInvalidCards(batch);
