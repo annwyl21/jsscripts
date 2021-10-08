@@ -18,7 +18,7 @@ function pAequorFactory (specimenNum, dna){
     specimenNum: specimenNum,
     dna: dna,
     mutate () {
-      let mutatedDna = dna;
+      let mutatedDna = dna.slice();
       let randomNumDna = Math.floor(Math.random()*15);
       let newBase = returnRandBase();
       console.log(`\n This item was changed ${randomNumDna+1}\n ${dna[randomNumDna]} was changed to ${newBase}\n `);
@@ -26,24 +26,43 @@ function pAequorFactory (specimenNum, dna){
         console.log(`PROBLEM: base same ${newBase}`)
         this.mutate();
       }else {
-      dna.splice(randomNumDna, 1, newBase);
+      mutatedDna.splice(randomNumDna, 1, newBase);
       }
       return mutatedDna
     },
-    compareDNA (mutatedDna) {
-      let numberDnaSame;
+    compareDna (object) {
+      let dnaCheck = 15;
+      let originalDna = this.dna;
+      console.log(this.dna);
+      let changed = object.dna;
+      console.log(changed);
       for (count = 0; count<15; count++){
-        if(dna[count] === mutatedDna[count]){
-          numberDnaSame++
+        if(originalDna[count] !== changed[count]){
+          dnaCheck = dnaCheck-1;
         }
-      }
-      let percentage = Math.floor((numberDnaSame/15)*100);
+      } 
+      let percentage = Math.floor((dnaCheck/15)*100);
       console.log(`\nspecimen #1 and specimen #2 have ${percentage}\% DNA in common`)
+    },
+    willLikelySurvive(){
+      let subjects = dna.slice();
+      let survivors = subjects.filter (letter => letter === 'C' || letter === 'G')
+      if (survivors.length >=9){
+        return true
+      } else {
+        return false
+      }
     }
   }
 }
 
-const newThing = pAequorFactory(1, mockUpStrand());
-console.log(newThing);
-newThing.compareDna(this.mutate());
-console.log(newThing);
+for (theCount = 1; theCount <=30; theCount++) {
+  //create 30 newThings
+  const newThing = pAequorFactory(theCount, mockUpStrand());
+  //check if they will survive and record all the survivors
+  if(newThing.willLikelySurvive() === false){
+    theCount = theCount-1;
+  }else {
+    console.log(`${newThing.specimenNum}, ${newThing.dna}`);
+  }
+}
