@@ -19,6 +19,7 @@ function pAequorFactory (specimenNum, dna){
     dna: dna,
     mutate () {
       let mutatedDna = dna.slice();
+      console.log(this.dna);
       let randomNumDna = Math.floor(Math.random()*15);
       let newBase = returnRandBase();
       console.log(`\n This item was changed ${randomNumDna+1}\n ${dna[randomNumDna]} was changed to ${newBase}\n `);
@@ -33,7 +34,7 @@ function pAequorFactory (specimenNum, dna){
     compareDna (object) {
       let dnaCheck = 15;
       let originalDna = this.dna;
-      console.log(this.dna);
+      //console.log(this.dna);
       let changed = object.dna;
       console.log(changed);
       for (count = 0; count<15; count++){
@@ -56,6 +57,7 @@ function pAequorFactory (specimenNum, dna){
   }
 }
 
+let thirtyNewThings = [];
 for (theCount = 1; theCount <=30; theCount++) {
   //create 30 newThings
   const newThing = pAequorFactory(theCount, mockUpStrand());
@@ -63,6 +65,21 @@ for (theCount = 1; theCount <=30; theCount++) {
   if(newThing.willLikelySurvive() === false){
     theCount = theCount-1;
   }else {
-    console.log(`${newThing.specimenNum}, ${newThing.dna}`);
+    //store these instances/ objects in an array
+    thirtyNewThings.push(newThing);
+    //console.log(`${newThing.specimenNum}, ${newThing.dna}`);
   }
 }
+
+//The new array of 30 things...
+// console.log(thirtyNewThings);
+
+//comparing the dna of 2 things...
+// let dna1 = thirtyNewThings[0];
+// let dna25 = thirtyNewThings[25];
+// dna1.compareDna(dna25);
+
+//mutating DNA objects...
+// let dna13 = thirtyNewThings[13];
+// console.log(`${dna13.specimenNum}\n ${dna13.dna}`);
+// console.log(dna13.mutate());
