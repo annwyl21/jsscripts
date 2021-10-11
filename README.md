@@ -2,4 +2,4 @@
 
 ## Add a Header here
 
-## How manytt should i add?
+## How many should i add?
