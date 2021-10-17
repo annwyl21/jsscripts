@@ -2,19 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.Component {
-    render() {
-    return (
-      <button 
-      className="square" 
-      onClick={() => this.props.onClick()}
-      //function() can be replaced with () => which often leads to the common error of forgetting to put the () =>
-      //this.setstate tells the computer to re-render the square when clicked
-      >
-        {this.props.value}
-      </button>
-    );
-  }
+function Square (props) {
+  return (
+    <button className="Square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
 }
 
 class Board extends React.Component {
