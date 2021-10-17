@@ -41,7 +41,7 @@ function goal(target, saved) {
     console.log(`It will take ${moneyPot.length} months to save up to achieve your goal.`)
 }
 
-goal(500, 205)
+goal(1000, 205)
 console.log(''),
 
 
