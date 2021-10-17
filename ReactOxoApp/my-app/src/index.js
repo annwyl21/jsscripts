@@ -5,6 +5,7 @@ import './index.css';
 class Square extends React.Component {
   constructor(props) {
     super(props);
+    //this line is needed everytime a constructor is used in a react component class
     this.state = {
       value: null,
     };
@@ -13,8 +14,13 @@ class Square extends React.Component {
 
   render() {
     return (
-      <button className="square" onClick={function() {console.log('click'); }}> //function() can be replaced with () => but if you do that you will forget the syntax and it wont work properly, stick to using words
-        {this.props.value}
+      <button 
+      className="square" 
+      onClick={() => this.setState({value: 'X'})
+      //function() can be replaced with () => which often leads to the common error of forgetting to put the () =>
+      //this.setstate tells the computer to re-render the square when clicked
+      >
+        {this.state.value}
       </button>
     );
   }
