@@ -1,6 +1,6 @@
 ## Coding Mum1
 
-My first page [DOG YEARS](https://github.com/annwyl21/jsscripts/blob/gh-pages/dogYears)
+My first page [DOG YEARS](https://github.com/annwyl21/jsscripts/edit/gh-pages/dogYears)
 
 You can use the [editor on GitHub](https://github.com/annwyl21/jsscripts/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
