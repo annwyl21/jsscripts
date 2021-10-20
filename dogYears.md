@@ -31,7 +31,7 @@ My dog is <input type="number" id="dogAge" name="dogAge"/> years old.
     let bigDog = laterYears * 4;
     let calculatedAge = smallDog + bigDog;
     if (typeof age !== "number" || age === 0) {
-        response = `Please enter an age`
+        response = `You did not enter an age.`
         }else if (age === 2) {
         response = `You are 2, that's 21 in dog years.`;
         }else if (age === 1) {
@@ -46,7 +46,6 @@ My dog is <input type="number" id="dogAge" name="dogAge"/> years old.
   
 function ageInHumanYears() {
     dogAge = document.getElementById("dogAge").value;
-    console.log(dogAge);
     let answer = "";
     const childhood = 21;
     let olderYears = dogAge-2;
