@@ -1,3 +1,30 @@
+<script>
+  let age = process.argv[2];
+
+function ageInDogYears(age=21) {
+    let earlyYears = 2;
+    earlyYears * 10.5;
+    let laterYears= age-2;
+    laterYears * 4;
+    let calculatedAge = earlyYears+laterYears;
+    return `You are ${age}, that's ${calculatedAge} in dog years.`;
+}
+
+function ageInHumanYears(dogAge=1) {
+    let childhood = 2;
+    childhood *= 10.5;
+    let adulthood = dogAge-2;
+    adulthood *= 4;
+    if(age<=2){
+        let babyDog = age * 10.5;
+        return `Your dog is ${dogAge}, that's ${babyDog} in human Years.`
+    }else{
+        let adjustedAge = childhood+adulthood;
+        return `Your dog is ${dogAge}, that's ${adjustedAge} in human Years.`
+    }
+}
+</script>
+
 ## Calculating my age in dog years
 
 This project was a task in Codecademy. 
@@ -9,7 +36,7 @@ and our dogs age in human years...
 ## What is my age in dog years?
 
 I am <input type="number" id="age" name="age"/> years old. 
-<button name="button" onclick="http://www.google.com">WORK OUT MY AGE</button>
+<button name="button" onclick=ageInDogYears(45)>WORK OUT MY AGE</button>
 
 **You are x years old.**
 
