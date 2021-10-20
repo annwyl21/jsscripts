@@ -32,7 +32,7 @@ My dog is <input type="number" id="age" name="age"/> years old.
 document.getElementById("theResponse").innerHTML = response;
   
 function ageInHumanYears(dogAge=1) {
-    let answer = "":
+    let answer = "";
     const childhood = 21;
     let olderYears = dogAge-2;
     let adulthood = olderYears * 4;
