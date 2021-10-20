@@ -9,7 +9,7 @@ and our dogs age in human years...
 ## What is my age in dog years?
 
 I am <input type="number" id="age" name="age"/> years old. 
-<input type="button" onclick="ageInDogYears()" value="WORK OUT MY AGE" />
+<input type="button" onclick="ageInDogYears()" value="Click to calculate" />
 <div id="theResponse"><BR/></div>
 
 <BR/>
@@ -17,7 +17,7 @@ I am <input type="number" id="age" name="age"/> years old.
 ## How old is my dog in human years?
 
 My dog is <input type="number" id="dogAge" name="dogAge"/> years old.
-<input type="button" onclick="ageInHumanYears()" value="WORK OUT MY DOGS AGE" />
+<input type="button" onclick="ageInHumanYears()" value="Click to calculate" />
 <div id="theAnswer"><BR/></div>
 
 <script>
@@ -29,8 +29,16 @@ My dog is <input type="number" id="dogAge" name="dogAge"/> years old.
     let smallDog = earlyYears * 10.5;
     let laterYears= age-2;
     let bigDog = laterYears * 4;
-    let calculatedAge = smallDog+bigDog;
-    response = `You are ${age}, that's ${calculatedAge} in dog years.`;
+    let calculatedAge = smallDog + bigDog;
+    if (typeOf age !== "number" || age === 0) {
+        response = `Please enter an age`
+        (age === 2) {
+        reponse = `You are 2, that's 21 in dog years.`;
+        }else if (age === 1) {
+        response = `You are 1, that's 10.5 in dog years.`;
+        }else {        
+        response = `You are ${age}, that's ${calculatedAge} in dog years.`;
+        }
     document.getElementById("theResponse").innerHTML = response;
 };
 
