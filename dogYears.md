@@ -16,12 +16,13 @@ I am <input type="number" id="age" name="age"/> years old.
 
 ## How old is my dog in human years?
 
-My dog is <input type="number" id="age" name="age"/> years old.
+My dog is <input type="number" id="dogAge" name="dogAge"/> years old.
 <input type="button" onclick="ageInHumanYears()" value="WORK OUT MY DOGS AGE" />
 <div id="theAnswer"><BR/></div>
 
 <script>
   function ageInDogYears(age=21) {
+    console.log(document.getElementById("age").value)
     let response = "";
     let earlyYears = 2;
     let smallDog = earlyYears * 10.5;
