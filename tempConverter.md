@@ -19,3 +19,7 @@ Image 'State of dress'
 25C swims
 30C pic of fan
 55C flames
+
+Can I link to MET weather RSS feed to include wind chill
+
+Can I display a laundry safe image by determining when it will rain from an RSS weather feed
