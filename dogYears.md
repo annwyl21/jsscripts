@@ -5,9 +5,11 @@
     let laterYears= age-2;
     let bigDog = laterYears * 4;
     let calculatedAge = smallDog+bigDog;
-    console.log(`You are ${age}, that's ${calculatedAge} in dog years.`);
+    let response = `You are ${age}, that's ${calculatedAge} in dog years.`;
 };
 
+document.getElementById("theResponse").innerHTML = response;
+  
 function ageInHumanYears(dogAge=1) {
     const childhood = 21;
     let olderYears = dogAge-2;
@@ -17,9 +19,12 @@ function ageInHumanYears(dogAge=1) {
         console.log(`Your dog is ${dogAge}, that is ${babyDog} in human Years.`);
     }else{
         let adjustedAge = childhood + adulthood;
-        console.log(`Your dog is ${dogAge}, that is ${adjustedAge} in human Years.`);
+        let answer = `Your dog is ${dogAge}, that is ${adjustedAge} in human Years.`;
     };
 };
+
+document.getElementById("theAnswer").innerHTML = answer;
+                   
 </script>
 
 ## Calculating my age in dog years
@@ -34,8 +39,10 @@ and our dogs age in human years...
 
 I am <input type="number" id="age" name="age"/> years old. 
 <input type="button" onclick="ageInDogYears()" value="WORK OUT MY AGE" />
+<div id="theResponse"><BR/></div>
 
 ### How old is my dog in human years?
 
 My dog is <input type="number" id="age" name="age"/> years old.
 <input type="button" onclick="ageInHumanYears()" value="WORK OUT MY DOGS AGE" />
+<div id="theAnswer"><BR/></div>
