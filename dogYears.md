@@ -9,16 +9,15 @@
 }
 
 function ageInHumanYears(dogAge=1) {
-    let childhood = 2;
-    let littleDog = childhood * 10.5;
-    let adulthood = dogAge-2;
-    let grownUpDog = adulthood * 4;
+    const childhood = 21;
+    let olderYears = dogAge-2;
+    let adulthood = olderYears * 4;
     if(dogAge <=2){
         let babyDog = dogAge * 10.5;
-        console.log(`Your dog is ${dogAge}, that's ${babyDog} in human Years.`);
+        console.log(`Your dog is ${dogAge}, that is ${babyDog} in human Years.`);
     }else{
-        let adjustedAge = littleDog + grownUpDog;
-        console.log(`Your dog is ${dogAge}, that's ${adjustedAge} in human Years.`);
+        let adjustedAge = childhood + adulthood;
+        console.log(`Your dog is ${dogAge}, that is ${adjustedAge} in human Years.`);
     }
 }
 </script>
