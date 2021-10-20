@@ -27,9 +27,10 @@ My dog is <input type="number" id="age" name="age"/> years old.
     let bigDog = laterYears * 4;
     let calculatedAge = smallDog+bigDog;
     response = `You are ${age}, that's ${calculatedAge} in dog years.`;
+    document.getElementById("theResponse").innerHTML = response;
 };
 
-document.getElementById("theResponse").innerHTML = response;
+
   
 function ageInHumanYears(dogAge=1) {
     let answer = "";
@@ -42,9 +43,9 @@ function ageInHumanYears(dogAge=1) {
     }else{
         let adjustedAge = childhood + adulthood;
         answer = `Your dog is ${dogAge}, that is ${adjustedAge} in human Years.`;
-    };
+    };             
+    document.getElementById("theAnswer").innerHTML = answer;
 };
 
-document.getElementById("theAnswer").innerHTML = answer;
                    
 </script>
