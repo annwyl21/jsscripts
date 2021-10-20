@@ -21,8 +21,8 @@ My dog is <input type="number" id="dogAge" name="dogAge"/> years old.
 <div id="theAnswer"><BR/></div>
 
 <script>
-  function ageInDogYears(age=21) {
-    console.log(document.getElementById("age").value)
+  function ageInDogYears() {
+    age = document.getElementById("age").value
     let response = "";
     let earlyYears = 2;
     let smallDog = earlyYears * 10.5;
