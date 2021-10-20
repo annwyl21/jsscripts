@@ -8,14 +8,14 @@ and our dogs age in human years...
 
 ## What is my age in dog years?
 
-I am BOX years old. 
+I am <input type="number" id="age" name="age"/> years old. 
 [FIND MY AGE BUTTON](http://www.google.com){: .btn}
 
 **You are x years old.**
 
 ### How old is my dog in human years?
 
-My dog is BOX years old.
+My dog is <input type="number" id="age" name="age"/> years old.
 [FIND MY DOGS AGE](http://www.google.com){: .btn}
 
 **Your dog is x years old in human years.**
