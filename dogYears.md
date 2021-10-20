@@ -18,7 +18,7 @@ I am <input type="number" id="age" name="age"/> years old.
 
 My dog is <input type="number" id="age" name="age"/> years old.
 <input type="button" onclick="ageInHumanYears()" value="WORK OUT MY DOGS AGE" />
-<div id="theAnswer"><BR/></div>
+#<div id="theAnswer"><BR/></div>
 
 <script>
   function ageInDogYears(age=21) {
@@ -41,7 +41,7 @@ function ageInHumanYears(dogAge=1) {
     let adulthood = olderYears * 4;
     if(dogAge <=2){
         let babyDog = dogAge * 10.5;
-        console.log(`Your dog is ${dogAge}, that is ${babyDog} in human Years.`);
+        answer = `Your dog is ${dogAge}, that is ${babyDog} in human Years.`;
     }else{
         let adjustedAge = childhood + adulthood;
         answer = `Your dog is ${dogAge}, that is ${adjustedAge} in human Years.`;
