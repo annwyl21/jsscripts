@@ -38,4 +38,4 @@ I am <input type="number" id="age" name="age"/> years old.
 ### How old is my dog in human years?
 
 My dog is <input type="number" id="age" name="age"/> years old.
-<input type="button" onclick="ageInHumanYears" value="WORK OUT MY DOGS AGE" />
+<input type="button" onclick="alert("hello")" value="WORK OUT MY DOGS AGE" />
