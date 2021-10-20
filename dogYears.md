@@ -10,7 +10,9 @@ and our dogs age in human years...
 
 I am <input type="number" id="age" name="age"/> years old. 
 <input type="button" onclick="ageInDogYears()" value="WORK OUT MY AGE" />
-<div id="theResponse"><BR/></div>
+#<div id="theResponse"><BR/></div>
+
+<BR/>
 
 ## How old is my dog in human years?
 
