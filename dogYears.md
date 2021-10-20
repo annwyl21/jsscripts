@@ -30,7 +30,7 @@ My dog is <input type="number" id="dogAge" name="dogAge"/> years old.
     let laterYears= age-2;
     let bigDog = laterYears * 4;
     let calculatedAge = smallDog + bigDog;
-    if (typeof age !== "number" || age === 0) {
+    if (age === 0) {
         age = 21;
         response = `You are ${age}, that's ${calculatedAge} in dog years.`;
         }else if (age === 2) {
