@@ -20,17 +20,19 @@ My dog is <input type="number" id="age" name="age"/> years old.
 
 <script>
   function ageInDogYears(age=21) {
+    let response = "";
     let earlyYears = 2;
     let smallDog = earlyYears * 10.5;
     let laterYears= age-2;
     let bigDog = laterYears * 4;
     let calculatedAge = smallDog+bigDog;
-    let response = `You are ${age}, that's ${calculatedAge} in dog years.`;
+    response = `You are ${age}, that's ${calculatedAge} in dog years.`;
 };
 
 document.getElementById("theResponse").innerHTML = response;
   
 function ageInHumanYears(dogAge=1) {
+    let answer = "":
     const childhood = 21;
     let olderYears = dogAge-2;
     let adulthood = olderYears * 4;
@@ -39,7 +41,7 @@ function ageInHumanYears(dogAge=1) {
         console.log(`Your dog is ${dogAge}, that is ${babyDog} in human Years.`);
     }else{
         let adjustedAge = childhood + adulthood;
-        let answer = `Your dog is ${dogAge}, that is ${adjustedAge} in human Years.`;
+        answer = `Your dog is ${dogAge}, that is ${adjustedAge} in human Years.`;
     };
 };
 
