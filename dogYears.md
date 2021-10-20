@@ -14,11 +14,17 @@ I am <input type="number" id="age" name="age"/> years old.
 
 <BR/>
 
+This is how old you would have to be to gain the equivalent wisdom of a dog that had lived to your ripe old age. Dogs are infinitely wiser than people, imho.
+
 ## How old is my dog in human years?
 
 My dog is <input type="number" id="dogAge" name="dogAge"/> years old.
 <input type="button" onclick="ageInHumanYears()" value="Click to calculate" />
 <div id="theAnswer"><BR/></div>
+
+<BR/>
+
+For every year that goes by, your dear old dog gains approximately 7 years of human wisdom.  For example by the time your dog is 2, she knows about roads, people, dogs and cars, it takes children 20 years to get that far... This is how old your dog would be if she had lived each of those human years gaining wisdom, instead of her condensed, swift 'smarter' life.
 
 <script>
   function ageInDogYears() {
