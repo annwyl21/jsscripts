@@ -5,7 +5,7 @@
     let laterYears= age-2;
     laterYears * 4;
     let calculatedAge = earlyYears+laterYears;
-    return `You are ${age}, that's ${calculatedAge} in dog years.`;
+    console.log(`You are ${age}, that's ${calculatedAge} in dog years.`);
 }
 
 function ageInHumanYears(dogAge=1) {
