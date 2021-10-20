@@ -1,7 +1,5 @@
 <script>
-  let age = process.argv[2];
-
-function ageInDogYears(age=21) {
+  function ageInDogYears(age=21) {
     let earlyYears = 2;
     earlyYears * 10.5;
     let laterYears= age-2;
@@ -36,10 +34,7 @@ and our dogs age in human years...
 ## What is my age in dog years?
 
 I am <input type="number" id="age" name="age"/> years old. 
-<input type="button" onclick=function fun() {
-        alert("hello");
-        ageInDogYears();
-    } value="WORK OUT MY AGE" />
+<input type="button" onclick="ageInDogYears()" value="WORK OUT MY AGE" />
 
 **You are x years old.**
 
