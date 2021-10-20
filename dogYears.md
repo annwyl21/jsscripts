@@ -6,7 +6,7 @@
     let bigDog = laterYears * 4;
     let calculatedAge = smallDog+bigDog;
     console.log(`You are ${age}, that's ${calculatedAge} in dog years.`);
-}
+};
 
 function ageInHumanYears(dogAge=1) {
     const childhood = 21;
@@ -18,8 +18,8 @@ function ageInHumanYears(dogAge=1) {
     }else{
         let adjustedAge = childhood + adulthood;
         console.log(`Your dog is ${dogAge}, that is ${adjustedAge} in human Years.`);
-    }
-}
+    };
+};
 </script>
 
 ## Calculating my age in dog years
