@@ -32,13 +32,13 @@ My dog is <input type="number" id="dogAge" name="dogAge"/> years old.
     let calculatedAge = smallDog + bigDog;
     if (typeof age !== "number" || age === 0) {
         response = `Please enter an age`
-        (age === 2) {
-        reponse = `You are 2, that's 21 in dog years.`;
+        }else if (age === 2) {
+        response = `You are 2, that's 21 in dog years.`;
         }else if (age === 1) {
         response = `You are 1, that's 10.5 in dog years.`;
         }else {        
         response = `You are ${age}, that's ${calculatedAge} in dog years.`;
-        }
+        };
     document.getElementById("theResponse").innerHTML = response;
 };
 
