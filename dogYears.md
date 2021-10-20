@@ -36,7 +36,7 @@ and our dogs age in human years...
 ## What is my age in dog years?
 
 I am <input type="number" id="age" name="age"/> years old. 
-<input type="button" onclick="ageInDogYears(45)" value="WORK OUT MY AGE" />
+<input type="button" onclick="alert('hello')" value="WORK OUT MY AGE" />
 
 **You are x years old.**
 
