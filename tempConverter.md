@@ -4,10 +4,11 @@ A function to convert a temperature into alternative measurement units.
 
 **I am working on this page just now, check back later to see if it is finished**
 
-Enter temperature in degrees Celcius
-Enter temperature in degrees Farenheit
+Enter temperature in degrees Celcius <input type="number" id="celcius" name="celcius"/> 
+<input type="button" onclick="alert()" value="Click to convert" />
 
-Press button to convert
+Enter temperature in degrees Farenheit <input type="number" id="farenheit" name="farenheit"/> 
+<input type="button" onclick="alert()" value="Click to convert" />
 
 Result in Celcius, Farenheit, Kelvin & Newton
 Image 'State of dress'
