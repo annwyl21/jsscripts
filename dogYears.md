@@ -25,18 +25,14 @@ My dog is <input type="number" id="dogAge" name="dogAge"/> years old.
     age = document.getElementById("age").value;
     console.log(age);
     let response = "";
+    let childAge = age * 10.5;
     let earlyYears = 2;
-    let smallDog = earlyYears * 10.5;
+    let smallPerson = earlyYears * 10.5;
     let laterYears= age-2;
     let bigDog = laterYears * 4;
-    let calculatedAge = smallDog + bigDog;
-    if (age === 0) {
-        age = 21;
-        response = `You are ${age}, that's ${calculatedAge} in dog years.`;
-        }else if (age === 2) {
-        response = `You are 2, that's 21 in dog years.`;
-        }else if (age === 1) {
-        response = `You are 1, that's 10.5 in dog years.`;
+    let calculatedAge = smallPerson + bigDog;
+    if (age <=2) {
+        response = `You are ${age}, that's ${childAge} in dog years.`;
         }else {        
         response = `You are ${age}, that's ${calculatedAge} in dog years.`;
         };
