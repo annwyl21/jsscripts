@@ -22,7 +22,7 @@ Enter temperature in degrees Fahrenheit <input type="number" id="fahrenheit" nam
 <script>
 function celsiusConverter() {
     let result = "";
-    let celsius = document.getElementById("celsius").value;
+    let celsius = Number(document.getElementById("celsius").value);
     console.log(celsius);
     let kelvin = celsius + 273.15;
     let fahrenheit = celsius*(9/5)+32;
