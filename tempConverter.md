@@ -24,7 +24,7 @@ function celsiusConverter() {
     let result = "";
     let celsius = document.getElementById("celsius").value;
     console.log(celsius);
-    let kelvin = 273.15+celsius;
+    let kelvin = celsius + 273.15;
     let fahrenheit = celsius*(9/5)+32;
     let newton = celsius*(33/100);
     result = `Degrees ${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`;
