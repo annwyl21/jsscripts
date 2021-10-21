@@ -17,29 +17,15 @@ Enter temperature in degrees Fahrenheit <input type="number" id="fahrenheit" nam
 <input type="button" onclick="fahrenheitConverter()" value="Click to convert" />
 <div id="theAnswer"><BR/></div>
 
-Image 'State of dress'
-
--20C inside igloo
-0C ski gear
-10C coat
-18C dress or t-shirt & jeans - pic of kids
-25C swims
-30C pic of fan
-55C flames
-
-Can I link to MET weather RSS feed to include wind chill
-
-Can I display a laundry safe image by determining when it will rain from an RSS weather feed
-
 <script>
 function celsiusConverter() {
     let result = "";
     let celsius = document.getElementById("celsius").value;
     console.log(celsius);
     let fahrenheit = Math.floor(celsius*(9/5)+32);
-    let kelvin = Math.floor(celsius + 273.15);
+    let kelvin = Math.floor(273.15 + celsius);
     let newton = Math.floor(celsius*(33/100));
-    result = `${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`;
+    result = `Degrees ${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`;
     document.getElementById("theResult").innerHTML = result;
 };
 
@@ -50,7 +36,7 @@ function fahrenheitConverter() {
     let celsius = Math.floor((fahrenheit-32)*5/9);
     let kelvin = Math.floor(celsius + 273.15);
     let newton = Math.floor(celsius*(33/100));
-    answer = `${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`; 
+    answer = `Degrees ${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`; 
     document.getElementById("theAnswer").innerHTML = answer;
 };
   </script>
