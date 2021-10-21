@@ -17,7 +17,7 @@ Enter temperature in degrees Fahrenheit <input type="number" id="fahrenheit" nam
 <input type="button" onclick="fahrenheitConverter()" value="Click to convert" />
 <div id="theAnswer"><BR/></div>
 
-![image of temperature](chilly.jpg)
+<div id="image"></div>
 
 <script>
 function celsiusConverter() {
@@ -28,6 +28,9 @@ function celsiusConverter() {
     let fahrenheit = celsius*(9/5)+32;
     let newton = celsius*(33/100);
     result = `Degrees ${celsius} C, ${Math.round(fahrenheit)} F, ${Math.round(kelvin)} K, ${Math.round(newton)} N`;
+    if (celsius >=30) {
+    document.getElementById("image").innerHTML = <img src="chilly.jpg" alt="coat, hat and scarf weather">;
+    }
     document.getElementById("theResult").innerHTML = result;
 };
 
