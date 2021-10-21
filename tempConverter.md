@@ -5,7 +5,7 @@ A function to convert a temperature into alternative measurement units.
 **I am working on this page just now, check back later to see if it is finished**
 
 ## Enter a temperature to discover the equivalent temperature in:
-celsius, farenheit, kelvins and newtons.
+celsius, fahrenheit, kelvins and newtons.
 
 Enter temperature in degrees Celsius <input type="number" id="celsius" name="celsius"/> 
 <input type="button" onclick="celsiusConverter()" value="Click to convert" />
@@ -35,7 +35,7 @@ function fahrenheitConverter() {
     let answer = "";
     let f = document.getElementById("fahrenheit").value;
     console.log(f);
-    let c = Math.round(f-32)*5/9;
+    let c = Math.round(f-32)*5/9);
     let k = Math.round(c+273.15);
     let n = Math.round(c*(33/100));
     answer = `Degrees ${c} C, ${f} F, ${k} K, ${n} N`; 
