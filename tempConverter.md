@@ -22,9 +22,9 @@ function celsiusConverter() {
     let result = "";
     let celsius = document.getElementById("celsius").value;
     console.log(celsius);
-    let fahrenheit = Math.floor(celsius*(9/5)+32);
-    let kelvin = Math.floor(273.15+celsius);
-    let newton = Math.floor(celsius*(33/100));
+    let kelvin = Math.round(273.15+celsius);
+    let fahrenheit = Math.round(celsius*(9/5)+32);
+    let newton = Math.round(celsius*(33/100));
     result = `Degrees ${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`;
     document.getElementById("theResult").innerHTML = result;
 };
@@ -33,9 +33,9 @@ function fahrenheitConverter() {
     let answer = "";
     let fahrenheit = document.getElementById("fahrenheit").value;
     console.log(fahrenheit);
-    let celsius = Math.floor((fahrenheit-32)*5/9);
-    let kelvin = Math.floor(celsius+273.15);
-    let newton = Math.floor(celsius*(33/100));
+    let celsius = Math.round((fahrenheit-32)*5/9);
+    let kelvin = Math.round(celsius+273.15);
+    let newton = Math.round(celsius*(33/100));
     answer = `Degrees ${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`; 
     document.getElementById("theAnswer").innerHTML = answer;
 };
