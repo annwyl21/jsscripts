@@ -32,9 +32,9 @@ Can I link to MET weather RSS feed to include wind chill
 Can I display a laundry safe image by determining when it will rain from an RSS weather feed
 
 <script>
-function celciusConverter(number) {
+function celciusConverter() {
     let result = "";
-    let celcius = number;
+    let celcius = document.getElementById("celsius").value;
     let fahrenheit = Math.floor(celsius*(9/5)+32);
     let kelvin = Math.floor(celcius + 273.15);
     let newton = Math.floor(celsius*(33/100));
@@ -42,9 +42,9 @@ function celciusConverter(number) {
     document.getElementById("theResult").innerHTML = result;
 };
 
-function fahrenheitConverter(digit) {
+function fahrenheitConverter() {
     let answer = "";
-    let fahrenheit = number;
+    let fahrenheit = document.getElementById("fahrenheit").value;
     let celcius = Math.floor((fahrenheit-32)*5/9);
     let kelvin = Math.floor(celcius + 273.15);
     let newton = Math.floor(celsius*(33/100));
