@@ -22,7 +22,7 @@ function celsiusConverter() {
     let result = "";
     let celsius = document.getElementById("celsius").value;
     console.log(celsius);
-    let kelvin = Math.round(273.15+celsius);
+    let kelvin = Math.round(273.15+=celsius);
     let fahrenheit = Math.round(celsius*(9/5)+32);
     let newton = Math.round(celsius*(33/100));
     result = `Degrees ${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`;
