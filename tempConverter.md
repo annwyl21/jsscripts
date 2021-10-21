@@ -27,3 +27,23 @@ Image 'State of dress'
 Can I link to MET weather RSS feed to include wind chill
 
 Can I display a laundry safe image by determining when it will rain from an RSS weather feed
+
+<script>
+function celciusConverter(number) {
+    let result = "";
+    let celcius = number;
+    let fahrenheit = Math.floor(celsius*(9/5)+32);
+    let kelvin = Math.floor(celcius + 273.15);
+    let newton = Math.floor(celsius*(33/100));
+    result = `${celcius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`
+};
+
+function fahrenheitConverter(digit) {
+    let answer = "";
+    let fahrenheit = number;
+    let celcius = Math.floor((fahrenheit-32)*5/9);
+    let kelvin = Math.floor(celcius + 273.15);
+    let newton = Math.floor(celsius*(33/100));
+    answer = `${celcius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N` 
+}
+  </script>
