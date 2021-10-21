@@ -1,10 +1,10 @@
 ### Temperature Conversion Project
 
-A function to convert a temperature into alternative measurement units.
+A function to convert a temperature into alternative units of measurement.
 
-**I am working on this page just now, check back later to see if it is finished**
+### I am working on this page just now, check back later to see if it is finished
 
-## Enter a temperature to discover the equivalent temperature in:
+## Enter a number to discover the equivalent temperature in:
 celsius, fahrenheit, kelvins and newtons.
 
 Enter temperature in degrees Celsius <input type="number" id="celsius" name="celsius"/> 
@@ -24,10 +24,10 @@ function celsiusConverter() {
     let result = "";
     let celsius = document.getElementById("celsius").value;
     console.log(celsius);
-    let kelvin = Math.round(celsius + 273.15);
-    let fahrenheit = Math.round(celsius*(9/5)+32);
-    let newton = Math.round(celsius*(33/100));
-    result = `Degrees ${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`;
+    let kelvin = celsius + 273.15;
+    let fahrenheit = celsius*(9/5)+32;
+    let newton = celsius*(33/100);
+    result = `Degrees ${celsius} C, ${Math.round(fahrenheit)} F, ${Math.round(kelvin)} K, ${Math.round(newton)} N`;
     document.getElementById("theResult").innerHTML = result;
 };
 
@@ -35,10 +35,10 @@ function fahrenheitConverter() {
     let answer = "";
     let f = document.getElementById("fahrenheit").value;
     console.log(f);
-    let c = Math.round(f-32)*5/9);
-    let k = Math.round(c+273.15);
-    let n = Math.round(c*(33/100));
-    answer = `Degrees ${c} C, ${f} F, ${k} K, ${n} N`; 
+    let c = f-32)*5/9;
+    let k = c+273.15;
+    let n = c*(33/100);
+    answer = `Degrees ${Math.round(c)} C, ${f} F, ${Math.round(k)} K, ${Math.round(n)} N`; 
     document.getElementById("theAnswer").innerHTML = answer;
 };
   </script>
