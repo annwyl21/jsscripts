@@ -5,10 +5,10 @@ A function to convert a temperature into alternative measurement units.
 **I am working on this page just now, check back later to see if it is finished**
 
 ## Enter a temperature to discover the equivalent temperature in:
-celcius, farenheit, kelvins and newtons.
+celsius, farenheit, kelvins and newtons.
 
-Enter temperature in degrees Celcius <input type="number" id="celcius" name="celcius"/> 
-<input type="button" onclick="celciusConverter()" value="Click to convert" />
+Enter temperature in degrees Celsius <input type="number" id="celsius" name="celsius"/> 
+<input type="button" onclick="celsiusConverter()" value="Click to convert" />
 <div id="theResult"><BR/></div>
 
 <BR/>
@@ -32,14 +32,14 @@ Can I link to MET weather RSS feed to include wind chill
 Can I display a laundry safe image by determining when it will rain from an RSS weather feed
 
 <script>
-function celciusConverter() {
+function celsiusConverter() {
     let result = "";
-    let celcius = document.getElementById("celsius").value;
-    console.log(celcius);
+    let celsius = document.getElementById("celsius").value;
+    console.log(celsius);
     let fahrenheit = Math.floor(celsius*(9/5)+32);
-    let kelvin = Math.floor(celcius + 273.15);
+    let kelvin = Math.floor(celsius + 273.15);
     let newton = Math.floor(celsius*(33/100));
-    result = `${celcius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`;
+    result = `${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`;
     document.getElementById("theResult").innerHTML = result;
 };
 
@@ -47,10 +47,10 @@ function fahrenheitConverter() {
     let answer = "";
     let fahrenheit = document.getElementById("fahrenheit").value;
     console.log(fahrenheit);
-    let celcius = Math.floor((fahrenheit-32)*5/9);
-    let kelvin = Math.floor(celcius + 273.15);
+    let celsius = Math.floor((fahrenheit-32)*5/9);
+    let kelvin = Math.floor(celsius + 273.15);
     let newton = Math.floor(celsius*(33/100));
-    answer = `${celcius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`; 
+    answer = `${celsius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`; 
     document.getElementById("theAnswer").innerHTML = answer;
 };
   </script>
