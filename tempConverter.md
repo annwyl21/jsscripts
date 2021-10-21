@@ -13,7 +13,7 @@ Enter temperature in degrees Celcius <input type="number" id="celcius" name="cel
 
 <BR/>
 
-Enter temperature in degrees Farenheit <input type="number" id="farenheit" name="farenheit"/> 
+Enter temperature in degrees Fahrenheit <input type="number" id="fahrenheit" name="fahrenheit"/> 
 <input type="button" onclick="fahrenheitConverter()" value="Click to convert" />
 <div id="theAnswer"><BR/></div>
 
@@ -35,20 +35,22 @@ Can I display a laundry safe image by determining when it will rain from an RSS 
 function celciusConverter() {
     let result = "";
     let celcius = document.getElementById("celsius").value;
+    console.log(celcius);
     let fahrenheit = Math.floor(celsius*(9/5)+32);
     let kelvin = Math.floor(celcius + 273.15);
     let newton = Math.floor(celsius*(33/100));
-    result = `${celcius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`
+    result = `${celcius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`;
     document.getElementById("theResult").innerHTML = result;
 };
 
 function fahrenheitConverter() {
     let answer = "";
     let fahrenheit = document.getElementById("fahrenheit").value;
+    console.log(fahrenheit);
     let celcius = Math.floor((fahrenheit-32)*5/9);
     let kelvin = Math.floor(celcius + 273.15);
     let newton = Math.floor(celsius*(33/100));
-    answer = `${celcius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N` 
+    answer = `${celcius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`; 
     document.getElementById("theAnswer").innerHTML = answer;
-}
+};
   </script>
