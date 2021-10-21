@@ -17,7 +17,7 @@ Enter temperature in degrees Fahrenheit <input type="number" id="fahrenheit" nam
 <input type="button" onclick="fahrenheitConverter()" value="Click to convert" />
 <div id="theAnswer"><BR/></div>
 
-![image of temperature](verycold.jpg)
+![image of temperature](chilly.jpg)
 
 <script>
 function celsiusConverter() {
