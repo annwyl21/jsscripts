@@ -9,13 +9,13 @@ celcius, farenheit, kelvins and newtons.
 
 Enter temperature in degrees Celcius <input type="number" id="celcius" name="celcius"/> 
 <input type="button" onclick="celciusConverter()" value="Click to convert" />
-<div id="result"><BR/></div>
+<div id="theResult"><BR/></div>
 
 <BR/>
 
 Enter temperature in degrees Farenheit <input type="number" id="farenheit" name="farenheit"/> 
 <input type="button" onclick="fahrenheitConverter()" value="Click to convert" />
-<div id="answer"><BR/></div>
+<div id="theAnswer"><BR/></div>
 
 Image 'State of dress'
 
@@ -39,6 +39,7 @@ function celciusConverter(number) {
     let kelvin = Math.floor(celcius + 273.15);
     let newton = Math.floor(celsius*(33/100));
     result = `${celcius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N`
+    document.getElementById("theResult").innerHTML = result;
 };
 
 function fahrenheitConverter(digit) {
@@ -48,5 +49,6 @@ function fahrenheitConverter(digit) {
     let kelvin = Math.floor(celcius + 273.15);
     let newton = Math.floor(celsius*(33/100));
     answer = `${celcius} C, ${fahrenheit} F, ${kelvin} K, ${newton} N` 
+    document.getElementById("theAnswer").innerHTML = answer;
 }
   </script>
