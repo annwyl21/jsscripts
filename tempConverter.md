@@ -8,12 +8,15 @@ A function to convert a temperature into alternative measurement units.
 celcius, farenheit, kelvins and newtons.
 
 Enter temperature in degrees Celcius <input type="number" id="celcius" name="celcius"/> 
-<input type="button" onclick="alert()" value="Click to convert" />
+<input type="button" onclick="celciusConverter()" value="Click to convert" />
+<div id="result"><BR/></div>
+
+<BR/>
 
 Enter temperature in degrees Farenheit <input type="number" id="farenheit" name="farenheit"/> 
-<input type="button" onclick="alert()" value="Click to convert" />
+<input type="button" onclick="fahrenheitConverter()" value="Click to convert" />
+<div id="answer"><BR/></div>
 
-Result in Celcius, Farenheit, Kelvin & Newton
 Image 'State of dress'
 
 -20C inside igloo
