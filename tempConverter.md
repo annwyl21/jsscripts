@@ -35,7 +35,7 @@ function fahrenheitConverter() {
     let answer = "";
     let f = document.getElementById("fahrenheit").value;
     console.log(f);
-    let c = f-32)*5/9;
+    let c = (f-32)*5/9;
     let k = c+273.15;
     let n = c*(33/100);
     answer = `Degrees ${Math.round(c)} C, ${f} F, ${Math.round(k)} K, ${Math.round(n)} N`; 
