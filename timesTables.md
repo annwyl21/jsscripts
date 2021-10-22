@@ -3,10 +3,10 @@
 A function to support learning times tables.
 
 Enter a number to choose which times table to work on
+<BR/>
 <input type="number" id="choice" name="choice"/> 
 <input type="button" onclick="generateQuestion()" value="QUESTION"/>
 <div id="theQuestion"><BR/></div>
-<BR/>
 <input type="number" id="response" name="response"/>
 <input type="button" onclick="checkAnswer()" value="ANSWER"/>
 <div id="theResponse"><BR/></div>
@@ -28,7 +28,6 @@ let questionAnswer = "";
 
 function generateQuestion() {
     let question = "";
-    let answer = "";
     num1 = Number(document.getElementById("choice").value);
     num2 = Math.floor(Math.random() * 12);
     question = `${num1} x ${num2} = `;
