@@ -17,6 +17,8 @@ Enter temperature in degrees Fahrenheit <input type="number" id="fahrenheit" nam
 
 <div id="image"></div>
 
+*Learning Point. It is important to specify the type of variable to avoid errors such as functions reading numbers but concatenating them instead of adding them up.*
+
 <script>
 function celsiusConverter() {
     let result = "";
