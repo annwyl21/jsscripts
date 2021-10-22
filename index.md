@@ -1,10 +1,8 @@
 # Coding Mum
 
-- [DOG YEARS](dogYears.md)
-- [TEMPERATURE CONVERTER](tempConverter.md)
-- [LEARNING OUR TIMES TABLES](timesTables.md)
-
-
+- [Learning our timestables](timesTables.md)
+- [A temperature converter](tempConverter.md)
+- [My age in dog years](dogYears.md)
 
 
 
