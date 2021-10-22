@@ -2,10 +2,8 @@
 
 A function to convert a temperature into alternative units of measurement.
 
-### I am working on this page just now, check back later to see if it is finished
-
 ## Enter a number to discover the equivalent temperature in:
-celsius, fahrenheit, kelvin and newton.
+Celsius, Fahrenheit, Kelvin and Newton
 
 Enter temperature in degrees Celsius <input type="number" id="celsius" name="celsius"/> 
 <input type="button" onclick="celsiusConverter()" value="Click to convert" />
