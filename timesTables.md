@@ -1,14 +1,23 @@
-# Times Tables Learning Page
+# Learning times tables
 
 A function to support learning times tables.
 
 Enter a number to choose which times table to work on
-click for a question
+<input type="number" id="choice" name="choice"/> 
+<BR/>
+<input type="button" onclick="generateQuestion()" value="Click for a Question"/>
+<div id="theQuestion"><BR/></div>
+<BR/>
+<input type="button" onclick="generateSquare()" value="Give me the Square"/>
+<div id="theSquare"><BR/></div>
+<BR/>
+<input type="button" onclick="generateDoubles()" value="Give me the Double"/>
+<div id="theDoubles"><BR/></div>
+<BR/>
+<input type="button" onclick="generateTable()" value = "Give me the Answer">
+<div id="theTable"><BR/></div>
 
-Result
-- random question generated from the chosen times table
-- support level 1, give the square number for that times table
-- support level 2, give the 2 and 4 times for the times table
-- provide the full times table to check yur answer against
-
-research a secret reveal for the 3 levels of support above
+<script>
+    user input = Number(document.getElementById("celsius").value);
+    return = document.getElementById("theResult").innerHTML = result;
+    </script>
