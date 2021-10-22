@@ -4,9 +4,11 @@ A function to support learning times tables.
 
 Enter a number to choose which times table to work on
 <input type="number" id="choice" name="choice"/> 
-<BR/>
-<input type="button" onclick="generateQuestion()" value="Click for a Question"/>
+<input type="button" onclick="generateQuestion()" value="QUESTION"/>
 <div id="theQuestion"><BR/></div>
+<BR/>
+<input type="number" id="response" name="response"/>
+<input type="button" onclick="alert(questionAnswer)" value="ANSWER"/>
 <BR/>
 <input type="button" onclick="generateSquare()" value="Give me the Square"/>
 <div id="theSquare"><BR/></div>
@@ -14,15 +16,20 @@ Enter a number to choose which times table to work on
 <input type="button" onclick="generateDouble()" value="Give me the Double"/>
 <div id="theDouble"><BR/></div>
 <BR/>
-<input type="button" onclick="generateTable()" value = "Give me the Answer">
+<input type="button" onclick="generateTable()" value = "Give me the Full Table">
 <div id="theTable"><BR/></div>
 
 <script>
+
+let questionAnswer = "";
+
 function generateQuestion() {
     let question = "";
+    let answer = "";
     num1 = Number(document.getElementById("choice").value);
     num2 = Math.floor(Math.random() * 12);
     question = `${num1} x ${num2} = `;
+    questionAnswer = num1*num2;
     document.getElementById("theQuestion").innerHTML = question;
 }
 
