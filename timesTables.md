@@ -1,4 +1,4 @@
-# Learning times tables
+# Learning our Times Tables
 
 A function to support learning times tables.
 
@@ -11,16 +11,13 @@ Enter a number to choose which times table to work on
 <input type="button" onclick="generateSquare()" value="Give me the Square"/>
 <div id="theSquare"><BR/></div>
 <BR/>
-<input type="button" onclick="generateDoubles()" value="Give me the Double"/>
-<div id="theDoubles"><BR/></div>
+<input type="button" onclick="generateDouble()" value="Give me the Double"/>
+<div id="theDouble"><BR/></div>
 <BR/>
 <input type="button" onclick="generateTable()" value = "Give me the Answer">
 <div id="theTable"><BR/></div>
 
 <script>
-    user input = Number(document.getElementById("celsius").value);
-    return = document.getElementById("theResult").innerHTML = result;
-
 function generateQuestion() {
     let question = "";
     num1 = Number(document.getElementById("choice").value);
@@ -38,23 +35,20 @@ ${num1} = ${square}`;
     document.getElementById("theSquare").innerHTML = squared;    
 }
 
-function generateDoubles() {
-    console.log('These sums might help...');
-    let lowTimesResult = 2* num2;
-    console.log(`2 sets of ${num2} are ${lowTimesResult} (2 x ${num2} = ${lowTimesResult})`);
-    console.log('and');
+function generateDouble() {
+    let double = "";
+    num1 = Number(document.getElementById("choice").value);
+    let lowTimesResult = 2* num1;
+    double = `2 sets of ${num2} are ${lowTimesResult}\n (2 x ${num2} = ${lowTimesResult})`;
+    document.getElementById("theDouble").innerHTML = double;
 }
 
-function doubling(num2) {
-    let two = num2+num2;
-    let doubledResult = two * num2;
-    console.log(`${two} sets of ${num2} are ${doubledResult} (${two} x ${num2} = ${doubledResult})`);
-    console.log('');//spare line to space it out
-}
-
-    //generating the full times table prompt
+function generateTable() {
+    let table = "";
+    num1 = Number(document.getElementById("choice").value);
     for (let count = 0; count < 21; count++) {
-        console.log(count + ' x ' + num2 + ' = ' + (count * num2))
+        table = `count + ' x ' + num2 + ' = ' + (count * num2)`
     }
-
-    </script>
+    document.getElementById("theTable").innerHTML = table;
+}
+</script>
