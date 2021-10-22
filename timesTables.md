@@ -39,7 +39,7 @@ function generateDouble() {
     let double = "";
     num1 = Number(document.getElementById("choice").value);
     let lowTimesResult = 2* num1;
-    double = `2 sets of ${num2} are ${lowTimesResult}\n (2 x ${num2} = ${lowTimesResult})`;
+    double = `2 sets of ${num1} are ${lowTimesResult}\n (2 x ${num1} = ${lowTimesResult})`;
     document.getElementById("theDouble").innerHTML = double;
 }
 
@@ -48,7 +48,7 @@ function generateTable() {
     num1 = Number(document.getElementById("choice").value);
     for (let count = 0; count < 21; count++) {
         let answer = count*num1;
-        table = `${count} x ${num1} = ${answer}`;
+        table += `${count} x ${num1} = ${answer}\n`;
     }
     document.getElementById("theTable").innerHTML = table;
 }
