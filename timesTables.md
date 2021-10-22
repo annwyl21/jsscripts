@@ -37,9 +37,10 @@ function generateQuestion() {
 
 function checkAnswer() {
     let message = "";
+    let answer = questionAnswer;
     let response = document.getElementById("response").value);
-    if (response === questionAnswer) {
-        message = `Congratulations, ${questionAnswer} is correct.`;
+    if (response === answer) {
+        message = `Congratulations, ${answer} is correct.`;
         document.getElementById("theResponse").innerHTML = message;
     }else{
         message = `Try looking at the full table to see where you went wrong`;
