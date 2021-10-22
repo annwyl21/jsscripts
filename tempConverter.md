@@ -30,7 +30,7 @@ function celsiusConverter() {
     result = `Degrees ${celsius} C, ${Math.round(fahrenheit)} F, ${Math.round(kelvin)} K, ${Math.round(newton)} N`;
     document.getElementById("theResult").innerHTML = result;
     if (celsius >=25) {
-    document.getElementById("image").innerHTML = '<img src="verywarm.jpg" alt="beach weather">';
+    document.getElementById("image").innerHTML = '<img src="hotWeather.jpg" alt="beach weather">';
     }else if (celsius >= 18) {
     document.getElementById("image").innerHTML = '<img src="pleasant.jpg" alt="t-shirts and jeans weather">';
     }else if (celsius >= 10) {
