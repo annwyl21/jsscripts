@@ -13,10 +13,8 @@ Enter a number to choose which times table to work on
 <BR/>
 <input type="button" onclick="generateSquare()" value="HINT Give me the Square"/>
 <div id="theSquare"><BR/></div>
-<BR/>
 <input type="button" onclick="generateDouble()" value="HINT Give me the Double"/>
 <div id="theDouble"><BR/></div>
-<BR/>
 <input type="button" onclick="generateTable()" value = "HINT Give me the Full Table">
 <div id="theTable"><BR/></div>
 
