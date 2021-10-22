@@ -37,9 +37,8 @@ function checkAnswer() {
     let message = "";
     let response = Number(document.getElementById("response").value);
     if (response === questionAnswer) {
-        message = `Congratulations, ${questionAnswer} is correct.`;
-        document.getElementById("theResponse").innerHTML = message;
-    }else{
+        document.getElementById("theResponse").innerHTML = '<video width="320" height="240" autoplay><source src="giggles.mp4">Video not supported</video>';
+        }else{
         message = `Try looking at the full table to see where you went wrong`;
         document.getElementById("theResponse").innerHTML = message;
     };
