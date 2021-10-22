@@ -20,6 +20,8 @@ Enter a number to choose which times table to work on
 <input type="button" onclick="generateTable()" value = "HINT Give me the Full Table">
 <div id="theTable"><BR/></div>
 
+*Learning Point. It is not as easy to take code from VSCode and move it into markdown/html as one would expect, careful reading through and testing is required.*
+
 <script>
 
 let questionAnswer = "";
@@ -32,7 +34,7 @@ function generateQuestion() {
     question = `${num1} x ${num2} = `;
     questionAnswer = num1*num2;
     document.getElementById("theQuestion").innerHTML = question;
-}
+};
 
 function checkAnswer() {
     let message = "";
@@ -43,8 +45,8 @@ function checkAnswer() {
     }else{
         message = `Try looking at the full table to see where you went wrong`;
         document.getElementById("theResponse").innerHTML = message;
-    }
-}
+    };
+};
 
 function generateSquare() {
     let squared = "";
@@ -53,7 +55,7 @@ function generateSquare() {
     squared = `Here is the square number to help you to count up or down...\n ${num1} x 
 ${num1} = ${square}`;
     document.getElementById("theSquare").innerHTML = squared;    
-}
+};
 
 function generateDouble() {
     let double = "";
@@ -61,7 +63,7 @@ function generateDouble() {
     let lowTimesResult = 2* num1;
     double = `2 sets of ${num1} are ${lowTimesResult}\n (2 x ${num1} = ${lowTimesResult})`;
     document.getElementById("theDouble").innerHTML = double;
-}
+};
 
 function generateTable() {
     let table = "";
