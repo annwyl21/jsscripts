@@ -8,15 +8,16 @@ Enter a number to choose which times table to work on
 <div id="theQuestion"><BR/></div>
 <BR/>
 <input type="number" id="response" name="response"/>
-<input type="button" onclick="alert(questionAnswer)" value="ANSWER"/>
+<input type="button" onclick="checkAnswer()" value="ANSWER"/>
+<div id="theResponse"><BR/></div>
 <BR/>
-<input type="button" onclick="generateSquare()" value="Give me the Square"/>
+<input type="button" onclick="generateSquare()" value="HINT Give me the Square"/>
 <div id="theSquare"><BR/></div>
 <BR/>
-<input type="button" onclick="generateDouble()" value="Give me the Double"/>
+<input type="button" onclick="generateDouble()" value="HINT Give me the Double"/>
 <div id="theDouble"><BR/></div>
 <BR/>
-<input type="button" onclick="generateTable()" value = "Give me the Full Table">
+<input type="button" onclick="generateTable()" value = "HINT Give me the Full Table">
 <div id="theTable"><BR/></div>
 
 <script>
@@ -31,6 +32,18 @@ function generateQuestion() {
     question = `${num1} x ${num2} = `;
     questionAnswer = num1*num2;
     document.getElementById("theQuestion").innerHTML = question;
+}
+
+function checkAnswer() {
+    let message = "";
+    let response = document.getElementById("response").value);
+    if (response === questionAnswer) {
+        message = `Congratulations, ${questionAnswer} is correct.`;
+        document.getElementById("theResponse").innerHTML = message;
+    }else{
+        message = `Try looking at the full table to see where you went wrong`;
+        document.getElementById("theResponse").innerHTML = message;
+    }
 }
 
 function generateSquare() {
