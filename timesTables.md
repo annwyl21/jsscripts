@@ -47,7 +47,8 @@ function generateTable() {
     let table = "";
     num1 = Number(document.getElementById("choice").value);
     for (let count = 0; count < 21; count++) {
-        table = `count + ' x ' + num2 + ' = ' + (count * num2)`
+        let answer = count*num1;
+        table = `${count} x ${num1} = ${answer}`;
     }
     document.getElementById("theTable").innerHTML = table;
 }
