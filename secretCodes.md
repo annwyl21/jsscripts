@@ -21,20 +21,19 @@ Type the secret code in here <input type="text" id="reveal" name="reveal"/>
 <script>
 
 const messageCode = require('./secretMessages.js');
-const createSecretMessage = messageCode.reverse();
-const decodeSecretMessage = messageCode.reverse();
+const reverseMessage = messageCode.reverse();
 
   function createSecretMessage() {
     message = document.getElementById("message").value;
     console.log(message);
-    response = message;
+    response = reverseMessage(message);
     document.getElementById("encoded").innerHTML = response;
 };
 
   function decodeSecretMessage() {
     decodedMessage = document.getElementById("reveal").value;
     console.log(decodedMessage);
-    result = decodedMessage;
+    result = reverseMessage(message);
     document.getElementById("decoded").innerHTML = result;
 };
 
