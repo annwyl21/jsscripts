@@ -43,7 +43,7 @@ function decodeCaesarCipher(string) {
     for (let counter = 0; counter < codedMessageArray.length; counter++){
         position = alphabetArray.indexOf(codedMessageArray[counter]);
         let adjustedPosition = position -6;
-            if (adjustedPosition <=0) {
+            if (adjustedPosition <0) {
                 newPosition = adjustedPosition + 26
             }else{
                 newPosition = adjustedPosition
