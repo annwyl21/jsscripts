@@ -1,10 +1,15 @@
-//Functions to export to create the secret messages play tool for the kids
+//Function to export that create the secret message play tool for the kids
 
-function reverse(string) {
+/*function reverse(string) {
     messageArray = string.split("");
     messageReversed = messageArray.reverse();
     return messageReversed.join("");
-}
+}*/
+//module.exports.reverse = reverse;
 
-console.log(reverse("hello"));
-
+module.exports.reverse = function(message) {
+    messageArray = string.split("");
+    messageReversed = messageArray.reverse();
+    return messageReversed.join("");
+    }
+    
