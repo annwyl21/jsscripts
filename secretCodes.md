@@ -29,8 +29,8 @@ Type the secret code in here <input type="text" id="reveal" name="reveal"/>
   function decodeSecretMessage() {
     decodedMessage = document.getElementById("reveal").value;
     console.log(decodedMessage);
-    response = decodedMessage;
-    document.getElementById("encoded").innerHTML = response;
+    result = decodedMessage;
+    document.getElementById("decoded").innerHTML = result;
 };
 
 </script>
