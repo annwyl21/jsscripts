@@ -26,14 +26,14 @@ Type the secret code in here <input type="text" id="reveal" name="reveal"/>
   function createSecretMessage() {
     encodeMessage = document.getElementById("message").value;
     //console.log(encodeMessage);
-    response = reverse(encodeMessage);
+    response = encodeSecrets(encodeMessage);
     document.getElementById("encoded").innerHTML = response;
 };
 
   function decodeSecretMessage() {
     decodedMessage = document.getElementById("reveal").value;
     //console.log(decodedMessage);
-    result = reverse(decodedMessage);
+    result = decodeSecrets(decodedMessage);
     document.getElementById("decoded").innerHTML = result;
 };
 
