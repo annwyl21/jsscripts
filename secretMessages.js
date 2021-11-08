@@ -14,16 +14,17 @@ function reverse(string) {
     }*/
 
 function caesarCipher(string) {
-    alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    codedMessageArray = string.split("");
+    alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ', '.', ','];
+    code = string.toLowerCase();
+    codedMessageArray = code.split("");
     let newArray = [];
     let position;
     let newPosition;
     for (let counter = 0; counter < codedMessageArray.length; counter++){
         position = alphabetArray.indexOf(codedMessageArray[counter]);
         let adjustedPosition = position +6;
-            if (adjustedPosition >=26) {
-                newPosition = adjustedPosition - 26
+            if (adjustedPosition >=29) {
+                newPosition = adjustedPosition - 29
             }else{
                 newPosition = adjustedPosition
             };
@@ -33,8 +34,9 @@ function caesarCipher(string) {
 }
 
 function decodeCaesarCipher(string) {
-    alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    codedMessageArray = string.split("");
+    alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ', '.', ','];
+    code = string.toLowerCase();
+    codedMessageArray = code.split("");
     let newArray = [];
     let position;
     let newPosition;
@@ -42,7 +44,7 @@ function decodeCaesarCipher(string) {
         position = alphabetArray.indexOf(codedMessageArray[counter]);
         let adjustedPosition = position -6;
             if (adjustedPosition <0) {
-                newPosition = adjustedPosition + 26
+                newPosition = adjustedPosition + 29
             }else{
                 newPosition = adjustedPosition
             };
