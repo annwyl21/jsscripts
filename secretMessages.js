@@ -8,8 +8,7 @@
 //module.exports.reverse = reverse;
 
 module.exports.reverse = function(message) {
-    messageArray = string.split("");
+    messageArray = message.split("");
     messageReversed = messageArray.reverse();
     return messageReversed.join("");
     }
-    
