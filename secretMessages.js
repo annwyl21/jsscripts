@@ -19,11 +19,10 @@ function caesarCipher(string) {
     let newArray = [];
     let position;
     let newPosition;
-    let letter;
     for (let counter = 0; counter < codedMessageArray.length; counter++){
         position = alphabetArray.indexOf(codedMessageArray[counter]);
         let adjustedPosition = position +6;
-            if (adjustedPosition >=25) {
+            if (adjustedPosition >=26) {
                 newPosition = adjustedPosition - 26
             }else{
                 newPosition = adjustedPosition
@@ -39,7 +38,6 @@ function decodeCaesarCipher(string) {
     let newArray = [];
     let position;
     let newPosition;
-    let letter;
     for (let counter = 0; counter < codedMessageArray.length; counter++){
         position = alphabetArray.indexOf(codedMessageArray[counter]);
         let adjustedPosition = position -6;
