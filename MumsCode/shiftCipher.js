@@ -9,48 +9,48 @@ class ShiftCipher {
         this.cipher = num;
     }
     encrypt(message){
-        let messageArray = [];
         let encryptedMessage = "";
-        let newLetter = "";
         let upperMessage = message.toUpperCase();
         for (let count=0; count<message.length; count++) {
             let letterValue = upperMessage.charCodeAt(count);
-            let newLetterValue = letterValue;
-            let adjustedValue = newLetterValue;
-            
+            let newLetterValue = letterValue;   
             if (letterValue >=65 && letterValue <=90) {
-                let newLetterValue = letterValue + this.cipher;
-        
-                if (newLetterValue <65) {
-                    adjustedValue = newLetterValue +26;
-                } else if (newLetterValue >90) {
-                    adjustedValue = newLetterValue -26;
-                } else {
-                    adjustedValue = newLetterValue;
-                } 
-            let newLetter = String.fromCharCode(adjustedValue);
-            messageArray.push(newLetter);
-            encryptedMessage = messageArray.join();
+                newLetterValue = letterValue + this.cipher;
+               if (newLetterValue >90) {
+                    newLetterValue = newLetterValue -26;
+                }
             }
+            let newLetter = String.fromCharCode(newLetterValue);
+            encryptedMessage = encryptedMessage + newLetter;
         }
     return encryptedMessage;
     }
-    /*
-    decrypt(string){
-      lower case
-      shifted back
+    
+    decrypt(codedMessage){
+        let decryptedMessage = "";
+        let lowerMessage = codedMessage.toLowerCase();
+        for (let count=0; count<codedMessage.length; count++) {
+            let letterValue = lowerMessage.charCodeAt(count);
+            let newLetterValue = letterValue; 
+            if (letterValue >=97 && letterValue <=122) {
+                newLetterValue = letterValue - this.cipher;
+               if (newLetterValue <97) {
+                    newLetterValue = newLetterValue +26;
+                }
+            }
+            let newLetter = String.fromCharCode(newLetterValue);
+            decryptedMessage = decryptedMessage + newLetter;
+        }
+    return decryptedMessage;
     }
-    */
+    
     }
 
 //console.log(`The character code ${message.charCodeAt(0)} is equal to ${message.charAt(0)}`);
 
 
 const cipher = new ShiftCipher(2);
-console.log(cipher.encrypt('A Zebra'));
-//console.log(cipher.encrypt('I love to code!')); 
+console.log(cipher.encrypt('I love to code!')); 
 // returns 'K NQXG VQ EQFG!'
-/*
-cipher.decrypt('K <3 OA RWRRA'); 
+console.log(cipher.decrypt('K <3 OA RWRRA')); 
 // returns 'i <3 my puppy'
-*/
