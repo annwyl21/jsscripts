@@ -19,11 +19,20 @@ function isEven (num) {
     };
 }
 
-console.log(isEven(50));
-console.log(isEven(75));
-console.log(isEven(-1));
-console.log(isEven(-2));
-console.log(isEven(1));
-console.log(isEven(0));
+//console.log(isEven(50));
+//console.log(isEven(75));
+//console.log(isEven(-1));
+//console.log(isEven(-2));
+//console.log(isEven(1));
+//console.log(isEven(0));
+//console.log(isEven(2));
 
-console.log(isEven(2));
+//simple recursion
+function countdown(start){
+    if (start>0){
+        console.log(start);
+        start = start-1
+        countdown(start);
+    }
+}
+countdown(10);
